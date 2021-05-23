@@ -1,6 +1,6 @@
 # CompBioConference
 
- Abstract and slides for a talk given at the First University of Glasgow Computational Biology Conference.
+ Abstract and slides for a talk given at the [First University of Glasgow Computational Biology Conference.](https://cbc.dcs.gla.ac.uk/index.html)
 
 __*Introducing features of agency into computational models of infectious disease*__
 
