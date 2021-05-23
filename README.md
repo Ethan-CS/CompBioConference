@@ -7,4 +7,4 @@ __*Introducing features of agency into computational models of infectious diseas
 
 [Ethan Kelly](mailto:e.kelly.1@research.gla.ac.uk)
 
-Computing Science, University of Glasgow
+PhD Computing Science student, University of Glasgow
