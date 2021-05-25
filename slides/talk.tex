@@ -65,7 +65,7 @@
 
 \begin{frame}{What is a Graph?}
 
-What is a graph (or network)?
+What is a graph (network)?
 
   \begin{itemize}
     \pause
@@ -409,191 +409,191 @@ Using these rates of protection and effectiveness, for fixed population size the
 
 % =============================================================================
 
-\section{Describing Compartmental Graph Models Exactly}
+%\section{Describing Compartmental Graph Models Exactly}
+%
+%% -----------------------------------------------------------------------------
+%\begin{frame}
+%  \frametitle{Outline}
+%  \tableofcontents[currentsection]
+%\end{frame}
+%
+%% -----------------------------------------------------------------------------
+%\subsection{Required Equations}
+%
+%\begin{frame}{Numbers of Equations}
+%
+%\begin{columns}
+%\begin{column}{0.5\textwidth}
+%Consider the triangle graph. The equations required to precisely express the system $SIR$ dynamics of this network are as below \cite{kiss_2014}.
+%\end{column}
+%
+%\begin{column}{0.5\textwidth}
+%\centering\includegraphics[width=0.4\textwidth]{assets/triangle}
+%\end{column}
+%\end{columns}
+%
+%\begin{align}
+%\text{6 singles: } & \dot{\langle S_1 \rangle}, \dot{\langle S_2 \rangle}, \dot{\langle S_3 \rangle}, \dot{\langle I_1 \rangle}, \dot{\langle I_2 \rangle}, \dot{\langle I_3 \rangle}.\label{eq:SIRsingle}\\
+%\text{6 doubles: } & \dot{\langle S_1 I_2 \rangle},\dot{\langle I_1 S_2 \rangle}, \dot{\langle S_1 I_3 \rangle}, \dot{\langle I_1 S_3 \rangle}, \dot{\langle S_2 I_3\rangle}, \dot{\langle I_2 S_3 \rangle}.\label{eq:SIRdouble}\\
+%\text{6 triples: } & \dot{\langle S_1 I_2 I_3 \rangle}, \dot{\langle S_1 I_2 S_3 \rangle}, \dot{\langle S_1 S_2 I_3 \rangle}, \dot{\langle I_1 S_2 S_3 \rangle}, \dot{\langle I_1 I_2 S_3 \rangle}, \dot{\langle I_1 S_2 I_3 \rangle}. \label{eq:SIRtriple}
+%\end{align}
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%
+%Using the equations for the $SIRP$ model, we have the following equation requirements:
+%\begin{align*}
+%\text{9 singles: (} \ref{eq:SIRsingle} \text{) and } & \dot{\langle P_1 \rangle}, \dot{\langle P_2 \rangle}, \dot{\langle P_3 \rangle}.\\
+%\text{18 doubles: (} \ref{eq:SIRdouble} \text{) and }& \dot{\langle S_1 P_2 \rangle},\dot{\langle P_1 S_2 \rangle}, \dot{\langle I_1 P_2 \rangle}, \dot{\langle P_1 I_2 \rangle}, \dot{\langle S_1 P_3\rangle}, \dot{\langle P_1 S_3 \rangle},\\ & \dot{\langle I_1 P_3 \rangle}, \dot{\langle P_1 I_3 \rangle}, \dot{\langle S_2 P_3 \rangle}, \dot{\langle P_2 S_3 \rangle}, \dot{\langle I_2 P_3 \rangle}, \dot{\langle P_2 I_3 \rangle}. \\
+%\text{24 triples: (} \ref{eq:SIRtriple} \text{) and } & \dot{\langle S_1 S_2 P_3 \rangle}, \dot{\langle S_1 P_2 S_3 \rangle}, \dot{\langle S_1 I_2 P_3\rangle}, \dot{\langle S_1 P_2 I_3 \rangle}, \dot{\langle S_1 P_2 P_3\rangle}, \\
+%& \dot{\langle I_1 S_2 P_3 \rangle}, \dot{\langle I_1 P_2 S_3 \rangle}, \dot{\langle I_1 I_2 P_3 \rangle}, \dot{\langle I_1 P_2 I_3 \rangle}, \dot{\langle I_1 P_2 P_2 \rangle},\\
+%& \dot{\langle P_1 S_2 S_3 \rangle}, \dot{\langle P_1 S_2 I_3 \rangle}, \dot{\langle P_1 I_2 S_3 \rangle}, \dot{\langle P_1 I_2 I_3 \rangle}, \dot{\langle P_1 P_2 I_3 \rangle}, \\
+%& \dot{\langle P_1 P_2 S_3 \rangle}, \dot{\langle P_1 S_2 P_3 \rangle},  \dot{\langle P_1 I_2 P_3\rangle}.
+%\end{align*}
+%
+%\end{frame}
 
 % -----------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Outline}
-  \tableofcontents[currentsection]
-\end{frame}
-
-% -----------------------------------------------------------------------------
-\subsection{Required Equations}
-
-\begin{frame}{Numbers of Equations}
-
-\begin{columns}
-\begin{column}{0.5\textwidth}
-Consider the triangle graph. The equations required to precisely express the system $SIR$ dynamics of this network are as below \cite{kiss_2014}.
-\end{column}
-
-\begin{column}{0.5\textwidth}
-\centering\includegraphics[width=0.4\textwidth]{assets/triangle}
-\end{column}
-\end{columns}
-
-\begin{align}
-\text{6 singles: } & \dot{\langle S_1 \rangle}, \dot{\langle S_2 \rangle}, \dot{\langle S_3 \rangle}, \dot{\langle I_1 \rangle}, \dot{\langle I_2 \rangle}, \dot{\langle I_3 \rangle}.\label{eq:SIRsingle}\\
-\text{6 doubles: } & \dot{\langle S_1 I_2 \rangle},\dot{\langle I_1 S_2 \rangle}, \dot{\langle S_1 I_3 \rangle}, \dot{\langle I_1 S_3 \rangle}, \dot{\langle S_2 I_3\rangle}, \dot{\langle I_2 S_3 \rangle}.\label{eq:SIRdouble}\\
-\text{6 triples: } & \dot{\langle S_1 I_2 I_3 \rangle}, \dot{\langle S_1 I_2 S_3 \rangle}, \dot{\langle S_1 S_2 I_3 \rangle}, \dot{\langle I_1 S_2 S_3 \rangle}, \dot{\langle I_1 I_2 S_3 \rangle}, \dot{\langle I_1 S_2 I_3 \rangle}. \label{eq:SIRtriple}
-\end{align}
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-
-Using the equations for the $SIRP$ model, we have the following equation requirements:
-\begin{align*}
-\text{9 singles: (} \ref{eq:SIRsingle} \text{) and } & \dot{\langle P_1 \rangle}, \dot{\langle P_2 \rangle}, \dot{\langle P_3 \rangle}.\\
-\text{18 doubles: (} \ref{eq:SIRdouble} \text{) and }& \dot{\langle S_1 P_2 \rangle},\dot{\langle P_1 S_2 \rangle}, \dot{\langle I_1 P_2 \rangle}, \dot{\langle P_1 I_2 \rangle}, \dot{\langle S_1 P_3\rangle}, \dot{\langle P_1 S_3 \rangle},\\ & \dot{\langle I_1 P_3 \rangle}, \dot{\langle P_1 I_3 \rangle}, \dot{\langle S_2 P_3 \rangle}, \dot{\langle P_2 S_3 \rangle}, \dot{\langle I_2 P_3 \rangle}, \dot{\langle P_2 I_3 \rangle}. \\
-\text{24 triples: (} \ref{eq:SIRtriple} \text{) and } & \dot{\langle S_1 S_2 P_3 \rangle}, \dot{\langle S_1 P_2 S_3 \rangle}, \dot{\langle S_1 I_2 P_3\rangle}, \dot{\langle S_1 P_2 I_3 \rangle}, \dot{\langle S_1 P_2 P_3\rangle}, \\
-& \dot{\langle I_1 S_2 P_3 \rangle}, \dot{\langle I_1 P_2 S_3 \rangle}, \dot{\langle I_1 I_2 P_3 \rangle}, \dot{\langle I_1 P_2 I_3 \rangle}, \dot{\langle I_1 P_2 P_2 \rangle},\\
-& \dot{\langle P_1 S_2 S_3 \rangle}, \dot{\langle P_1 S_2 I_3 \rangle}, \dot{\langle P_1 I_2 S_3 \rangle}, \dot{\langle P_1 I_2 I_3 \rangle}, \dot{\langle P_1 P_2 I_3 \rangle}, \\
-& \dot{\langle P_1 P_2 S_3 \rangle}, \dot{\langle P_1 S_2 P_3 \rangle},  \dot{\langle P_1 I_2 P_3\rangle}.
-\end{align*}
-
-\end{frame}
-
-% -----------------------------------------------------------------------------
-\subsection{Closures}
-
-\begin{frame}{What are closures?}
-
-\begin{itemize}
-	\pause
-	\item In the previous section, we saw equations for singles 
-	\pause
-	\item We have also seen equations needed for the triangle network (including doubles and triples)
-	\pause 
-	\item How many equations do we need in general?
-\end{itemize}
-\pause
-The number of other equations will usually increase when we require closures, as closure equations will sometimes require equations that we don't usually consider as they are dynamically uninteresting, e.g. $\langle S_i S_j \rangle$ where $i$ and $j$ are adjacent.
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-
-Consider the equations below for calculating singles and pairs:
-\begin{align*}
-\langle \dot{S_i} \rangle & = -\sum^N_{j=1}T_{ij}\langle S_iI_j\rangle,\\
-\langle\dot{I_i}\rangle & = \sum^N_{j=1}T_{ij}\langle S_iI_j\rangle - \gamma_i\langle I_i \rangle,\\
-\langle\dot{S_iI_j}\rangle & = \sum^N_{k=1,k\neq i}T_{jk}\langle S_i S_j I_k \rangle - \sum^N_{k=1,k\neq j}T_ik\langle I_k S_i I_j \rangle \\ 
-			    	      & ~~~~~~~~~~~~~~~~~- T_{ij}\langle S_iI_j \rangle - \gamma_i\langle S_i I_j \rangle,\\
-\langle \dot{S_i S_j}\rangle & = - \sum^N_{k=1,k\neq j}T_{ik}\langle I_k S_i S_j \rangle - \sum^N_{k=1,k\neq i}T_{jk}\langle S_i S_j I_k \rangle,
-\end{align*}
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-
-\begin{align*}
-\langle \dot{S_i} \rangle & = -\sum^N_{j=1}T_{ij}\langle S_iI_j\rangle,\\
-\langle\dot{I_i}\rangle & = \sum^N_{j=1}T_{ij}\langle S_iI_j\rangle - \gamma_i\langle I_i \rangle,\\
-\langle\dot{S_iI_j}\rangle & = \sum^N_{k=1,k\neq i}T_{jk}\highlight{\langle S_i S_j I_k \rangle} - \sum^N_{k=1,k\neq j}T_ik\highlight{\langle I_k S_i I_j \rangle} \\ 
-			    	      & ~~~~~~~~~~~~~~~~~- T_{ij}\langle S_iI_j \rangle - \gamma_i\langle S_i I_j \rangle,\\
-\langle \dot{S_i S_j}\rangle & = - \sum^N_{k=1,k\neq j}T_{ik}\highlight{\langle I_k S_i S_j \rangle} - \sum^N_{k=1,k\neq i}T_{jk}\highlight{\langle S_i S_j I_k \rangle},
-\end{align*}
-
-This is {\it not} a closed system - we require equations for triples.
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/0}
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/1}
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/2}
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/3}
-\end{frame}
-
-% -----------------
-
-\begin{frame}{Calculating Closures from Cut-Vertex Sets}
-
-Let $G = \{V,E\}$ be a graph on $N$ vertices. \pause Consider a connected subset of vertices $F = {v_1,v_2,\dots,v_k}\subset V$ \pause and assume $\exists v_{i^\ast} \in F$ a cut-vertex in $G$, such that $F \setminus \{v_{i^\ast}\}$ is partitioned into at least two disjointed components with vertices $F_1 = {v_1, v_2,\dots, v_{i-1}}$ and $F_2 = {v_{i+1}, v_{i+2},\dots, v_k}$ belonging to any such two, distinct and disjointed components or subnetworks. \pause Then the following equation holds:
-
-\begin{align*}
-\langle Z_{v_1} Z_{v_2},& \dots Z_{v_{i-1}} S_{v_i^\ast} Z_{v_{i+1}} \dots Z_{v_k} \rangle (t) = \\
-&\frac{\langle Z_{v_1} Z_{v_2} \dots Z_{v_{i-1}} S_{v_i^\ast}\rangle(t)\langle S_{v_i^\ast} Z_{v_{i+1}} \dots Z_{v_k} \rangle}{\langle S_{v_i^\ast} \rangle (t)}
-\end{align*}
-
-where $Z_{v_i} \in \{S, I\}~\forall v_i \neq v_{i^\ast}$. \cite{kiss_2014}
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}{Bounding}
-Denote by $\text{Ind}(v_{i_j})$ for $j=1,2,\dots,L$ the number of subgraph $v_{i_j}$ belongs to.\\
-\textbf{Upper bound:}
-\begin{equation*}
-N_{EQ}(G) = \sum^P_{i=1}m_if_i-2\sum^L_{j=1}(\text{Ind}(v_{i_j})-1).
-\end{equation*}
-We take a sum across number of equations for all subgraphs and subtract unnecessary multiplications from cut-vertices being replaced into produced sub-graphs. \cite{kiss_2014}
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}{Bounding}
-\textbf{Upper bound:}
-\begin{equation*}
-N_{EQ}(G) = \sum^P_{i=1}\highlight{m_i}f_i-2\sum^L_{j=1}(\text{Ind}(v_{i_j})-1).
-\end{equation*}
-Note: $m_i$ denotes the number of equations required for subnetwork $i$, e.g.
-\begin{itemize}
-	\item An edge requires 7 equations (4 for singles, 3 for pairs)
-	\item A triangle requires 22 equations
-	\item A cycle on 4 vertices requires 45 equations
-\end{itemize}
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-We can in fact bound these multipliers. From the requirements of a subgraph (connected, no cut vertices), for a number of vertices $n$ our worst-case scenario is the complete graph (everything is connected to everything else) and our best-case scenario is the cycle on $n$ vertices.
-
+%\subsection{Closures}
+%
+%\begin{frame}{What are closures?}
+%
+%\begin{itemize}
+%	\pause
+%	\item In the previous section, we saw equations for singles 
+%	\pause
+%	\item We have also seen equations needed for the triangle network (including doubles and triples)
+%	\pause 
+%	\item How many equations do we need in general?
+%\end{itemize}
 %\pause
-%\begin{figure}
-%\centering
-%  \begin{subfigure}{0.5\textwidth}
-%    \centering
-%    \includegraphics[width=0.45\textwidth]{assets/complete}
-%    \caption{Number of equations: X}
-%  \end{subfigure}%
-%\pause
-%  \begin{subfigure}{.5\textwidth}
-%  \centering
-%    \includegraphics[width=0.49\textwidth]{assets/cycle}
-%    \caption{Number of Equations: Y}
-%  \end{subfigure}
-% \caption{Best and Worst Case Scenarios}
-%\end{figure}
-
-\end{frame}
+%The number of other equations will usually increase when we require closures, as closure equations will sometimes require equations that we don't usually consider as they are dynamically uninteresting, e.g. $\langle S_i S_j \rangle$ where $i$ and $j$ are adjacent.
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%
+%Consider the equations below for calculating singles and pairs:
+%\begin{align*}
+%\langle \dot{S_i} \rangle & = -\sum^N_{j=1}T_{ij}\langle S_iI_j\rangle,\\
+%\langle\dot{I_i}\rangle & = \sum^N_{j=1}T_{ij}\langle S_iI_j\rangle - \gamma_i\langle I_i \rangle,\\
+%\langle\dot{S_iI_j}\rangle & = \sum^N_{k=1,k\neq i}T_{jk}\langle S_i S_j I_k \rangle - \sum^N_{k=1,k\neq j}T_ik\langle I_k S_i I_j \rangle \\ 
+%			    	      & ~~~~~~~~~~~~~~~~~- T_{ij}\langle S_iI_j \rangle - \gamma_i\langle S_i I_j \rangle,\\
+%\langle \dot{S_i S_j}\rangle & = - \sum^N_{k=1,k\neq j}T_{ik}\langle I_k S_i S_j \rangle - \sum^N_{k=1,k\neq i}T_{jk}\langle S_i S_j I_k \rangle,
+%\end{align*}
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%
+%\begin{align*}
+%\langle \dot{S_i} \rangle & = -\sum^N_{j=1}T_{ij}\langle S_iI_j\rangle,\\
+%\langle\dot{I_i}\rangle & = \sum^N_{j=1}T_{ij}\langle S_iI_j\rangle - \gamma_i\langle I_i \rangle,\\
+%\langle\dot{S_iI_j}\rangle & = \sum^N_{k=1,k\neq i}T_{jk}\highlight{\langle S_i S_j I_k \rangle} - \sum^N_{k=1,k\neq j}T_ik\highlight{\langle I_k S_i I_j \rangle} \\ 
+%			    	      & ~~~~~~~~~~~~~~~~~- T_{ij}\langle S_iI_j \rangle - \gamma_i\langle S_i I_j \rangle,\\
+%\langle \dot{S_i S_j}\rangle & = - \sum^N_{k=1,k\neq j}T_{ik}\highlight{\langle I_k S_i S_j \rangle} - \sum^N_{k=1,k\neq i}T_{jk}\highlight{\langle S_i S_j I_k \rangle},
+%\end{align*}
+%
+%This is {\it not} a closed system - we require equations for triples.
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/0}
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/1}
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/2}
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%\centering\includegraphics[height=0.9\textheight]{assets/eg-cutvertex/3}
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}{Calculating Closures from Cut-Vertex Sets}
+%
+%Let $G = \{V,E\}$ be a graph on $N$ vertices. \pause Consider a connected subset of vertices $F = {v_1,v_2,\dots,v_k}\subset V$ \pause and assume $\exists v_{i^\ast} \in F$ a cut-vertex in $G$, such that $F \setminus \{v_{i^\ast}\}$ is partitioned into at least two disjointed components with vertices $F_1 = {v_1, v_2,\dots, v_{i-1}}$ and $F_2 = {v_{i+1}, v_{i+2},\dots, v_k}$ belonging to any such two, distinct and disjointed components or subnetworks. \pause Then the following equation holds:
+%
+%\begin{align*}
+%\langle Z_{v_1} Z_{v_2},& \dots Z_{v_{i-1}} S_{v_i^\ast} Z_{v_{i+1}} \dots Z_{v_k} \rangle (t) = \\
+%&\frac{\langle Z_{v_1} Z_{v_2} \dots Z_{v_{i-1}} S_{v_i^\ast}\rangle(t)\langle S_{v_i^\ast} Z_{v_{i+1}} \dots Z_{v_k} \rangle}{\langle S_{v_i^\ast} \rangle (t)}
+%\end{align*}
+%
+%where $Z_{v_i} \in \{S, I\}~\forall v_i \neq v_{i^\ast}$. \cite{kiss_2014}
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}{Bounding}
+%Denote by $\text{Ind}(v_{i_j})$ for $j=1,2,\dots,L$ the number of subgraph $v_{i_j}$ belongs to.\\
+%\textbf{Upper bound:}
+%\begin{equation*}
+%N_{EQ}(G) = \sum^P_{i=1}m_if_i-2\sum^L_{j=1}(\text{Ind}(v_{i_j})-1).
+%\end{equation*}
+%We take a sum across number of equations for all subgraphs and subtract unnecessary multiplications from cut-vertices being replaced into produced sub-graphs. \cite{kiss_2014}
+%
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}{Bounding}
+%\textbf{Upper bound:}
+%\begin{equation*}
+%N_{EQ}(G) = \sum^P_{i=1}\highlight{m_i}f_i-2\sum^L_{j=1}(\text{Ind}(v_{i_j})-1).
+%\end{equation*}
+%Note: $m_i$ denotes the number of equations required for subnetwork $i$, e.g.
+%\begin{itemize}
+%	\item An edge requires 7 equations (4 for singles, 3 for pairs)
+%	\item A triangle requires 22 equations
+%	\item A cycle on 4 vertices requires 45 equations
+%\end{itemize}
+%\end{frame}
+%
+%% -----------------
+%
+%\begin{frame}
+%We can in fact bound these multipliers. From the requirements of a subgraph (connected, no cut vertices), for a number of vertices $n$ our worst-case scenario is the complete graph (everything is connected to everything else) and our best-case scenario is the cycle on $n$ vertices.
+%
+%%\pause
+%%\begin{figure}
+%%\centering
+%%  \begin{subfigure}{0.5\textwidth}
+%%    \centering
+%%    \includegraphics[width=0.45\textwidth]{assets/complete}
+%%    \caption{Number of equations: X}
+%%  \end{subfigure}%
+%%\pause
+%%  \begin{subfigure}{.5\textwidth}
+%%  \centering
+%%    \includegraphics[width=0.49\textwidth]{assets/cycle}
+%%    \caption{Number of Equations: Y}
+%%  \end{subfigure}
+%% \caption{Best and Worst Case Scenarios}
+%%\end{figure}
+%
+%\end{frame}
 
 % =============================================================================
 \section{Conclusion}
@@ -614,7 +614,7 @@ We discussed:
   \item \uncover<2->{Existing approaches to computational models of disease spread}
   \item \uncover<3->{How to extend existing approaches to better account for agency}
   \item \uncover<4->{How using a compartmental framework can help introduce agency formally}
-  \item \uncover<5->{Feasibility of describing compartmental graph models exactly}
+%  \item \uncover<5->{Feasibility of describing compartmental graph models exactly}
   \end{itemize}
 
 \end{frame}
