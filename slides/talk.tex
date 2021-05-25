@@ -75,34 +75,34 @@ What is a graph (network)?
     \pause
   \item Relations between objects are called {\it edges}. 
   \end{itemize}
-  \pause
-  \centering
-  \includegraphics[width=0.5\textwidth]{assets/mini-tree}
+%  \pause
+%  \centering
+%  \includegraphics[width=0.5\textwidth]{assets/mini-tree}
 
 \end{frame}
 % -----------------------------------------------------------------------------
-\begin{frame}{Examples of Graphs}
-
-\begin{columns}
-
-\begin{column}{.6\textwidth}
-\includegraphics[width=.8\linewidth,valign=t]{assets/er}
-\end{column}
-
-\begin{column}{.4\textwidth}
-\textbf{Example: Erd\H{o}s-R\'{e}nyi}
-
-\vspace{5pt}
-
-Random graph with a given number of vertices (in this case, 5) and a probability with which an edge exists between any two vertices.
-
-\end{column}
-
-\end{columns}
-
+%\begin{frame}{Examples of Graphs}
+%
+%\begin{columns}
+%
+%\begin{column}{.6\textwidth}
+%\includegraphics[width=.8\linewidth,valign=t]{assets/er}
+%\end{column}
+%
+%\begin{column}{.4\textwidth}
+%\textbf{Example: Erd\H{o}s-R\'{e}nyi}
+%
+%\vspace{5pt}
+%
+%Random graph with a given number of vertices (in this case, 5) and a probability with which an edge exists between any two vertices.
+%
+%\end{column}
+%
+%\end{columns}
+%\end{frame}
 % -----------------
 
-\end{frame}
+
 
 \begin{frame}{Examples of Graphs}
 
@@ -151,8 +151,7 @@ Depicts the marital alliances between Renaissance Florentine families \cite{padg
 
 \begin{frame}{Using Graphs to Model Disease Spread}
 
-\textbf{The Firefighter Problem ({\scshape Firefighter})} was first introduced by Hartnell in 1995 \cite{hartnell_1995}
-and models an outbreak of fire with a firefighter strategically blocking its path.
+\textbf{The Firefighter Problem ({\scshape Firefighter})} \cite{hartnell_1995} models an outbreak of fire with a firefighter strategically blocking its path.
 
 \begin{itemize}
 	\pause
@@ -233,7 +232,7 @@ Limitations:
 \subsection{Attributes of Agency}
 \begin{frame}{Attributes of Agency}
 
-If each vertex in the graph represents an individual agent, we can assign several attributes. We are particularly interested in each agent's {\it internal inclination towards protection}. In context, this might involve:
+If each vertex in the graph represents an individual agent, we can start to assign agency-related attributes. We are particularly interested in each agent's {\it internal inclination towards protection}. In context, this might involve:
 \begin{itemize}
 	\pause
 	\item Wearing PPE correctly
@@ -253,7 +252,7 @@ If each vertex in the graph represents an individual agent, we can assign severa
 % -----------------------------------------------------------------------------
 \begin{frame}{Defence Strategies}
 
-We should now ask what these amendments mean for how the game is played. In the usual formulation, general rule of thumb: {\it for sparse graphs, defend based on proximity to fire (breaking ties on degree); for dense graphs, defend based on degree (breaking ties on proximity)}. \pause
+What do these amendments mean for how the game is played? In the usual formulation, general rule of thumb: {\it for sparse graphs, defend based on proximity to fire (breaking ties on degree); for dense graphs, defend based on degree (breaking ties on proximity)}. \pause
 
 \vspace{5pt}
 
@@ -275,10 +274,10 @@ However, in our adjusted formulation we have more candidates for defence strateg
 \end{frame}
 
 % -----------------
-
-\begin{frame}{Deterministic Protection}
-\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Deterministic.jpg}
-\end{frame}
+%
+%\begin{frame}{Deterministic Protection}
+%\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Deterministic.jpg}
+%\end{frame}
 
 % -----------------
 
@@ -288,9 +287,9 @@ However, in our adjusted formulation we have more candidates for defence strateg
 
 % -----------------
 
-\begin{frame}{Mixed Protection}
-\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Mixed.jpg}
-\end{frame}
+%\begin{frame}{Mixed Protection}
+%\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Mixed.jpg}
+%\end{frame}
 
 % -----------------
 
@@ -299,35 +298,72 @@ However, in our adjusted formulation we have more candidates for defence strateg
 \end{frame}
 
 % -----------------
-
-\begin{frame}{Random Protection}
-\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Random.jpg}
-\end{frame}
+%
+%\begin{frame}{Random Protection}
+%\centering\includegraphics[height=0.8\textheight]{assets/charts/winners/Random.jpg}
+%\end{frame}
 
 % =============================================================================
-\section{Using Compartmental Frameworks}
-
-% -----------------------------------------------------------------------------
-\begin{frame}
-  \frametitle{Outline}
-  \tableofcontents[currentsection]
-\end{frame}
-
-% -----------------------------------------------------------------------------
-%\subsection{Standard $SIR$ model with fixed population}
+%\section{Using Compartmental Frameworks}
 %
+%% -----------------------------------------------------------------------------
+%\begin{frame}
+%  \frametitle{Outline}
+%  \tableofcontents[currentsection]
+%\end{frame}
+%
+%% -----------------------------------------------------------------------------
+%%\subsection{Standard $SIR$ model with fixed population}
+%%
+%%\begin{frame}
+%%
+%%The $SIR$ Model is a compartmental epidemiological model with three compartments (`states') related to an epidemic: {\it susceptible, infected} and {\it recovered.}
+%%\begin{itemize}
+%%	\pause
+%%	\item $S(t)$ - people who don't have (but are able to contract) the infection at time $t$,
+%%	\pause
+%%	\item $I(t)$ - individuals who currently have the disease and are infectious,
+%%	\pause
+%%	\item $R(t)$ - people who have had the disease and have since recovered
+%%	\pause
+%%	\item For fixed population $N$, we have $S(t) + I(t) + R(t) = N$ - i.e. fixed population.
+%%\end{itemize}
+%%
+%%\end{frame}
+%%
+%%% -----------------
+%%
+%%\begin{frame}
+%%
+%%Then, for rates of infection and recovery $\beta$ and $\gamma$ respectively, the standard $SIR$ model without vital dynamics is:
+%%
+%%\begin{align}
+%%	\frac{dS}{dt} & = -\beta \frac{SI}{N} \label{dS}\\
+%%	\frac{dI}{dt} & = \beta\frac{SI}{N} \gamma I \label{dI}\\
+%%	\frac{dR}{dt} & = \gamma I - \mu R \label{dR}
+%%\end{align}
+%%
+%%\end{frame}
+%
+%
+%% -----------------------------------------------------------------------------
+%\subsection{$SIR$ graph model} 
 %\begin{frame}
 %
-%The $SIR$ Model is a compartmental epidemiological model with three compartments (`states') related to an epidemic: {\it susceptible, infected} and {\it recovered.}
+%Examine probability of an agent being in a given state: 
 %\begin{itemize}
 %	\pause
-%	\item $S(t)$ - people who don't have (but are able to contract) the infection at time $t$,
+%	\item $\langle A_i \rangle$ - time-independent probability of $i$ being in state $A$
 %	\pause
-%	\item $I(t)$ - individuals who currently have the disease and are infectious,
+%	\item $\langle A_i B_i \rangle$ - probability of $i$ and $j$ being in states $A$ and $B$ respectively.
 %	\pause
-%	\item $R(t)$ - people who have had the disease and have since recovered
+%	\item $\beta_i$ - per-link infection rate for individual $i$.
 %	\pause
-%	\item For fixed population $N$, we have $S(t) + I(t) + R(t) = N$ - i.e. fixed population.
+%	\item $\gamma_i$ - recovery rate for $i$. 
+%	\pause
+%	\item For transmission matrix $T$, assign $T_{ij}=\beta_i$ if there is a route of infection between $i$ and $j$ ($T_{ij}=0$ otherwise). 
+%	\pause
+%	\item Often, we will consider unweighted and undirected graphs, but in general $T_{ij}$ may not equal $T_{ji}$.
 %\end{itemize}
 %
 %\end{frame}
@@ -336,74 +372,37 @@ However, in our adjusted formulation we have more candidates for defence strateg
 %
 %\begin{frame}
 %
-%Then, for rates of infection and recovery $\beta$ and $\gamma$ respectively, the standard $SIR$ model without vital dynamics is:
-%
-%\begin{align}
-%	\frac{dS}{dt} & = -\beta \frac{SI}{N} \label{dS}\\
-%	\frac{dI}{dt} & = \beta\frac{SI}{N} \gamma I \label{dI}\\
-%	\frac{dR}{dt} & = \gamma I - \mu R \label{dR}
-%\end{align}
+%We can replace $\beta_i$ with a term involving a transmission matrix of a network to begin extending the usual $SIR$ model into a network realm. 
+%%Using the substitution $ \beta_i \frac{SI}{N} = \sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle,$ the equations become
+%\begin{align*}
+%\dot{\langle S_i \rangle} & = -\sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle\\
+%\dot{\langle I_i \rangle} & =\sum^{N}_{j=1}T_{ij}\langle S_i I_j \rangle - \gamma_i \langle I \rangle \\
+%\dot{\langle R_i \rangle} & = \gamma_i \langle I \rangle,
+%\end{align*}
+%which are the evolution equations given in \cite{kiss_2014}.
 %
 %\end{frame}
-
-
-% -----------------------------------------------------------------------------
-\subsection{$SIR$ graph model} 
-\begin{frame}
-
-Examine probability of an agent being in a given state: 
-\begin{itemize}
-	\pause
-	\item $\langle A_i \rangle$ - time-independent probability of $i$ being in state $A$
-	\pause
-	\item $\langle A_i B_i \rangle$ - probability of $i$ and $j$ being in states $A$ and $B$ respectively.
-	\pause
-	\item $\beta_i$ - per-link infection rate for individual $i$.
-	\pause
-	\item $\gamma_i$ - recovery rate for $i$. 
-	\pause
-	\item For transmission matrix $T$, assign $T_{ij}=\beta_i$ if there is a route of infection between $i$ and $j$ ($T_{ij}=0$ otherwise). 
-	\pause
-	\item Often, we will consider unweighted and undirected graphs, but in general $T_{ij}$ may not equal $T_{ji}$.
-\end{itemize}
-
-\end{frame}
-
-% -----------------
-
-\begin{frame}
-
-We can replace $\beta_i$ with a term involving a transmission matrix of a network to begin extending the usual $SIR$ model into a network realm. 
-%Using the substitution $ \beta_i \frac{SI}{N} = \sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle,$ the equations become
-\begin{align*}
-\dot{\langle S_i \rangle} & = -\sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle\\
-\dot{\langle I_i \rangle} & =\sum^{N}_{j=1}T_{ij}\langle S_i I_j \rangle - \gamma_i \langle I \rangle \\
-\dot{\langle R_i \rangle} & = \gamma_i \langle I \rangle,
-\end{align*}
-which are the evolution equations given in \cite{kiss_2014}.
-
-\end{frame}
-
-% ----------------------------------------------------------------------------
-
-\subsection{Adding a new state}
-
-\begin{frame}{Protected State}
-\begin{itemize}
-	\item $\zeta_i$ - probability that we defend individual $i$,
-	\item $\alpha_i$ - efficacy of the protection measure for individual $i$ (may decay over time and vary from person to person). 	
-\end{itemize}
-\pause
-Using these rates of protection and effectiveness, for fixed population size the differential equations become:
-\pause
-\begin{align}
-\dot{\langle S_i \rangle} & = \alpha_i \langle P_i \rangle - \sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle - \zeta_i\langle S_i \rangle\\
-\dot{\langle I \rangle} & =\sum^{N}_{j=1}T_{ij}\langle S_i I_j \rangle - \gamma_i \langle I \rangle \\
-\dot{\langle R_i \rangle} & = \gamma_i \langle I \rangle \\
-\dot{\langle P_i \rangle} & = \zeta_i \langle S_i \rangle - \alpha_i \langle P_i \rangle.
-\end{align} 
-
-\end{frame}
+%
+%% ----------------------------------------------------------------------------
+%
+%\subsection{Adding a new state}
+%
+%\begin{frame}{Protected State}
+%\begin{itemize}
+%	\item $\zeta_i$ - probability that we defend individual $i$,
+%	\item $\alpha_i$ - efficacy of the protection measure for individual $i$ (may decay over time and vary from person to person). 	
+%\end{itemize}
+%\pause
+%Using these rates of protection and effectiveness, for fixed population size the differential equations become:
+%\pause
+%\begin{align}
+%\dot{\langle S_i \rangle} & = \alpha_i \langle P_i \rangle - \sum^{N}_{j=1}T_{ij} \langle S_i I_j \rangle - \zeta_i\langle S_i \rangle\\
+%\dot{\langle I \rangle} & =\sum^{N}_{j=1}T_{ij}\langle S_i I_j \rangle - \gamma_i \langle I \rangle \\
+%\dot{\langle R_i \rangle} & = \gamma_i \langle I \rangle \\
+%\dot{\langle P_i \rangle} & = \zeta_i \langle S_i \rangle - \alpha_i \langle P_i \rangle.
+%\end{align} 
+%
+%\end{frame}
 
 % -----------------
 
@@ -610,12 +609,12 @@ Using these rates of protection and effectiveness, for fixed population size the
 
 We discussed:
 
-  \begin{itemize}
-  \item \uncover<2->{Existing approaches to computational models of disease spread}
-  \item \uncover<3->{How to extend existing approaches to better account for agency}
-  \item \uncover<4->{How using a compartmental framework can help introduce agency formally}
-%  \item \uncover<5->{Feasibility of describing compartmental graph models exactly}
-  \end{itemize}
+\begin{itemize}
+	\item Some fundamentals of Graph Theory, including {\scshape Firefighter}
+	\item Using {\scshape Firefighter} as a model for disease spread
+	\item Failings of this approach to disease modelling
+	\item How agency can address these issues
+\end{itemize}
 
 \end{frame}
 
